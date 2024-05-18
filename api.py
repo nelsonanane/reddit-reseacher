@@ -42,10 +42,10 @@ def handle_message(event, say):
         print("scrape_crew", scrape_crew.get_results())
         say(f"Results: {scrape_crew.get_results()}") 
     else:
-    #     research_crew = ResearchCrew(text=text)
-    #     result = research_crew.get_results()
-    #     print("result===============", text) 
-        say(f"This is a text: {text}")
+        research_crew = ResearchCrew(text=text)
+        result = research_crew.get_results()
+        print("result===============", result) 
+        say(f"Result: {result}")
 
 @flask_app.route('/slack/events', methods=['POST'])
 def slack_events(): 
